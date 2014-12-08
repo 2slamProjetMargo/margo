@@ -19,7 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données: `margo`
 --
-
+CREATE DATABASE IF NOT EXISTS margo;
+USE margo;
 -- --------------------------------------------------------
 
 --
