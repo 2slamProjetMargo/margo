@@ -14,31 +14,20 @@ and open the template in the editor.
             <div id="margo">
                 Margo
             </div>
-            <div id="headerleft">?php include($this->lire('entete')); ?></div>
+            <div id="headerleft"><?php include($this->lireDonnee('entete')); ?></div>
             <div id="headerRight">
-                <a href="">Mon compte</a>
-                |
-                <a href="">Deconnexion</a>
+                <a href="">Connexion</a>
             </div>
         </div>
-        <section>
-            <div class="left">
-                <h4>Menu principal</h4>
-                <ul>
-                    <li><a href="">Acceuil</a></li>
-                    <li><a href="">Enseignements</a></li>
-                    <li><a href="">Fillières</a></li>
-                    <li><a href="">Classes</a></li>
-                    <li><a href="">Elèves</a></li>
-                </ul>
-            </div>
-        </section>
-        <div class="right">
-            ?php include($this->lire('centre')); ?>
+        <div class="left">
+            <?php include($this->lireDonnee('gauche')); ?>
+        </div>
+        <div class="center">
+            <?php include($this->lireDonnee('centre')); ?>
         </div>
     </body>
     <footer>
-        ?php include($this->lire('pied')); ?>
+        <?php include($this->lireDonnee('pied')); ?>
     </footer>
 </html>    
 </body>
