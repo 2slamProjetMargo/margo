@@ -8,7 +8,7 @@ class C_Accueil extends C_ControleurGenerique {
      */
     function defaut() {
         // les fichiers
-        $this->vue = new V_Vue("../vues/templates/template.inc.php");
+        $this->vue = new V_Vue("vues/templates/template.inc.php");
         $this->vue->ecrireDonnee('centre',"../vues/includes/accueil/centreAccueil.inc.php");
         // les données
         $this->vue->ecrireDonnee('titreVue',"GestStage : Accueil");

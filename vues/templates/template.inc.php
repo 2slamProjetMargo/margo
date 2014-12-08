@@ -6,7 +6,7 @@ and open the template in the editor.
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/stylesheet.css" />
+        <link rel="stylesheet" href="vues/css/stylesheet.css" />
         <title></title>
     </head>
     <body>
