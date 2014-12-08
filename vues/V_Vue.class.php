@@ -1,17 +1,6 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of V_Vue
- *
- * @author btssio
- */
-class V_Vue implements V_VueInterface{
+class V_Vue {
 
     private $fichier;
     private $donnees;
@@ -19,44 +8,46 @@ class V_Vue implements V_VueInterface{
     function __construct($chemin) {
         $this->fichier = $chemin;
         $this->donnees = array();
+        // composants par défaut de la vue
+        $this->donnees['entete'] = "../vues/templates/entete.inc.php";
+        $this->donnees['gauche'] = "../vues/templates/gauche.inc.php";
+        $this->donnees['pied'] = "../vues/templates/pied.inc.php";
     }
 
-    
     function afficher() {
         include($this->fichier);
     }
 
-
-    function ajouter($donnees,$valeurDonnee) {
-        $this->donnees[$donnees] = $valeurDonnee;
+    /**
+     * ajouter une information à transmettre à la vue : un couple (nom, valeur)
+     * @param string $nomDonnee : nom de l'information
+     * @param string $valeurDonnee : valeur de l'information
+     */
+    function ecrireDonnee($nomDonnee, $valeurDonnee) {
+        $this->donnees[$nomDonnee] = $valeurDonnee;
     }
 
-
-    function lire($donnees) {
-        $retour=null;
-        if(isset($this->donnees[$donnees])){
-            $retour=  $this->donnees[$donnees];
+    /**
+     * retourne valeur d'une information liée à la vue
+     * @param string $nomDonnee : nom de l'information recherchée
+     * @return string : valeur de l'information recherchée ; null sinon
+     */
+    function lireDonnee($nomDonnee) {
+        $retour = null;
+        if (isset($this->donnees[$nomDonnee])) {
+            $retour = $this->donnees[$nomDonnee];
         }
-        return $retour;  
-    }
-    
-    public function getFichier() {
-        return $this->fichier;
+        return $retour;
     }
 
-    public function getDonnees() {
-        return $this->donnees;
-    }
+//    /* ACCESSEURS */
+//
+//    public function getFichier() {
+//        return $this->fichier;
+//    }
+//
+//    public function getDonnees() {
+//        return $this->donnees;
+//    }
 
-    public function setFichier($fichier) {
-        $this->fichier = $fichier;
-    }
-
-    public function setDonnees($donnees) {
-        $this->donnees = $donnees;
-    }
-
-    public function __toString() {
-        $etat="objet de type : ".getFichier($this);
-    }
 }
