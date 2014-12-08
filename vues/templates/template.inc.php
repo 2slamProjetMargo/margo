@@ -12,7 +12,7 @@ and open the template in the editor.
     <body>
         <div id="header">
             <div id="margo">
-                Margo
+                <img src="vues/image/margo.jpg"/>
             </div>
             <div id="headerleft"><?php include($this->lireDonnee('entete')); ?></div>
             <div id="headerRight">

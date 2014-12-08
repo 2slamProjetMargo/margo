@@ -1,5 +1,7 @@
 <fieldset>
-    <h4>Menu principal</h4>
+    <legend>
+        <h4>Menu principal</h4>
+    </legend>
     <ul>
         <li><a href="">Acceuil</a></li>
         <li><a href="">Enseignements</a></li>
