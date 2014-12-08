@@ -6,15 +6,15 @@ and open the template in the editor.
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="<?php echo RACINE; ?>/vue/css/stylesheet.css" />
-        <title><?php echo $this->lire('titre'); ?></title>
+        <link rel="stylesheet" type="text/css" href="../vue/css/stylesheet.css"/>
+        <title></title>
     </head>
     <body>
         <div id="header">
             <div id="margo">
                 Margo
             </div>
-            <div id="headerleft"><?php include($this->lire('entete')); ?></div>
+            <div id="headerleft">?php include($this->lire('entete')); ?></div>
             <div id="headerRight">
                 <a href="">Mon compte</a>
                 |
@@ -37,12 +37,13 @@ and open the template in the editor.
         </aside>
         <aside>
             <div class="right">
-                <?php include($this->lire('centre')); ?>
+                ?php include($this->lire('centre')); ?>
             </div>
         </aside>
     </body>
     <footer>
-        <?php include($this->lire('pied')); ?>
+        
+        ?php include($this->lire('pied')); ?>
     </footer>
 </html>    
 </body>

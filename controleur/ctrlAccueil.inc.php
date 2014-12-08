@@ -1,5 +1,5 @@
 <?php
-    $maVue = new V_Vue.(RACINE."/vue/template.inc.php");
+    $maVue = new V_Vue(RACINE."/vue/template.inc.php");
     
     $maVue->ajouter('titre','Acceuil');
     $maVue->ajouter('entete',RACINE.'/vue/vueEntete.inc.php');
