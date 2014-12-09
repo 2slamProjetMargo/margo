@@ -11,6 +11,7 @@ body{
 
 
 #margo{
+    padding-top:7px;
     float:left;
     width:20%;
     height:100%;
@@ -19,23 +20,23 @@ body{
 }
 
 #margo img{
-    width:80%;
+    width:90%;
     height:80%;
 }
 
 #headerleft{
     padding-left:1%;
     float:left;
-    font-size:20px;
+    font-size:25px;
     height:80px;
     line-height: 80px;
 }
 
 #headerRight{
     padding-right:1%;
-    text-align:center;
-    font-size:15px;
+    text-align: center;
     float:right;
+    font-size:15px;
     height:80px;
     line-height: 80px;
 }
@@ -46,6 +47,7 @@ body{
 }
 
 #header {
+    border-bottom:1px solid black;
     float:right;
     width:100%;
     height: 80px;
@@ -53,6 +55,7 @@ body{
 }
 
 .left {
+    border-right:1px solid black;
     padding:1%;
     font-size:15px;
     float: left;
@@ -71,10 +74,55 @@ body{
     color:black;
 }
 
+#titreMenu{
+    font-size:20px;
+}
+
+#menu{  
+    width: 250px; /* optionnel, c'est pour la démo */  
+    list-style: none; /* supprime les puces de liste */  
+    padding: 4px; /* on fait un peu de place autour des liens */  
+    margin: 0; /* on annule les marges */  
+    background: #EBEAEA;  
+}  
+
+/* styles des liens et éléments de liste */  
+#menu-item,  
+#menu-item a {  
+    /* les liens et item deviennent des blocs */  
+    /* suffit théoriquement à virer les puces de liste */  
+    display: block;  
+}  
+
+/* styles des liens */  
+#menu-item a {  
+    margin: 2px 0; /* espace les liens d'1 px */  
+    padding: 8px 20px; /* marges internes pour aérer */   
+    color: #666;  
+    background: #FFF;  
+    text-decoration: none; /* on vire le soulignement */  
+
+    /* on définit la transition pour les navigateurs */  
+    -webkit-transition: all .3s; /* Chrome/Safari */  
+    -moz-transition: all .3s; /* Firefox (plus trop nécessaire) */  
+    transition: all .3s; /* syntaxe officielle */  
+}  
+
+/* styles changeants au survol et focus */  
+#menu-item a:hover,  
+#menu-item a:focus {  
+    background: #353B3A;  
+    color: white;  
+    padding-left: 30px; /* décalage du contenu de 10px vers la droite (30-20 = 10) */  
+}  
+
 footer{
+    border-top:1px solid black;
+    text-align: center;
     color:white;
     clear:both;
     width:100%;
     height: 80px;
+    line-height: 80px;
     background-color: #353B3A;
 }
