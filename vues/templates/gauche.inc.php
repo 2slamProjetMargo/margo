@@ -7,6 +7,6 @@
         <li><a href="">Enseignements</a></li>
         <li><a href="">Fillières</a></li>
         <li><a href="">Classes</a></li>
-        <li><a href="">Elèves</a></li>
+        <li><a href=".?controleur=ControleurGenerique&action=afficheListeEleve">Elèves</a></li>
     </ul>
 </fieldset>

@@ -1,10 +1,7 @@
-<script language="JavaScript" type="text/javascript" src="../vues/javascript/fonctionsJavascript.inc.js"></script>
-<script language="JavaScript" type="text/javascript" src="../bibliotheques/jquery.js"></script>
-<script language="JavaScript" type="text/javascript" src=".../vues/javascript/ajax.inc.js"></script>
 
 <!-- VARIABLES NECESSAIRES -->
 
-    <h1>Liste des stages :</h1>
+    <h1>Liste des élèves :</h1>
     <table id="tabListeStage">
         <thead id="enteteTabListeStage">
             <tr>
@@ -22,7 +19,6 @@
                         . '<td>"' . $etudiant->getNom() . '"</td>'
                         . '<td>"' . $etudiant->getPrenom() . '"</td>'
                         . '<td>"' . $etudiant->getSituation() . '"</td>'
-                        . '<td>"' . $etudiant->getOrga() . '"</td>'
                         . '<td>"' . $etudiant->getAdresse() . '"</td>'
                         . '<td>"' . $etudiant->getClasse().getCodeClasse() . '"</td>'
                         . '</tr>';
