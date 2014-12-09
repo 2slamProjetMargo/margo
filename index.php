@@ -10,7 +10,7 @@ $action= getParametre('action', 'defaut');
 // Formation du nom du contrôleur
 $nomClasseControleur= getNomClasse('C',$nomControleur); 
 // Instanciation du controleur
-$objetControleur=new $nomClasseControleur();
+$objetControleur= new $nomClasseControleur();
 
 // Déclenchement de l'action
 $objetControleur->$action();
