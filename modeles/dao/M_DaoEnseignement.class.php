@@ -37,7 +37,7 @@ class M_DaoEnseignement extends M_DaoGenerique{
     function getAll() {
         $retour = null;
         // Requête textuelle
-        $sql = "SELECT CODECLASSE, CODEMAT, VOLUMEHORAIREANNUEL, COEFFICIENT FROM ENSEIGNEMENT e INNER JOIN CLASSE c ON e.CODECLASSE = c.CODECLASSE INNER JOIN MATIERE m ON e.CODEMAT = m.CODEMAT";
+        $sql = "SELECT e.CODECLASSE, e.CODEMAT, VOLUMEHORAIREANNUEL, COEFFICIENT FROM ENSEIGNEMENT e INNER JOIN CLASSE c ON e.CODECLASSE = c.CODECLASSE INNER JOIN MATIERE m ON e.CODEMAT = m.CODEMAT";
         try {
             // préparer la requête PDO
             $queryPrepare = $this->pdo->prepare($sql);

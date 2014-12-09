@@ -1,12 +1,12 @@
 <?php
 
-class C_Eleve extends C_ControleurGenerique {
+class C_Enseignement extends C_ControleurGenerique {
 
     /**
      * controleur= accueil & action= index
      * Afficher la page d'accueil
      */
-    function afficheListeEleve() {
+    function afficheListeEnseignements() {
         // les fichiers
         $this->vue = new V_Vue("vues/templates/template.inc.php");
         $this->vue->ecrireDonnee('loginAuthentification',MaSession::get('login'));

@@ -13,7 +13,6 @@
             <?php
             $listeEnseignements = $this->lireDonnee('listeEnseignements');
             foreach ($listeEnseignements as $enseignement) {
-                //var_dump($enseignement); die;
                 echo'<tr><td>' . $enseignement->getClasse(). '</td>'
                         . '<td>' . $enseignement->getMatiere() . '</td>'
                         . '<td>' . $enseignement->getVolumeHoraireAnnuel() . '</td>'
