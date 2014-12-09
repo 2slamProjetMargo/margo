@@ -14,7 +14,7 @@ and open the template in the editor.
             <div id="margo">
                 <img src="vues/image/margo.jpg"/>
             </div>
-            <div id="headerleft"><?php include($this->lireDonnee('entete')); ?></div>
+            <div id="headerleft"><?php echo($this->lireDonnee('entete')); ?></div>
             <div id="headerRight">
                 <a href="">Connexion</a>
             </div>

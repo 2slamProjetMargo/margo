@@ -14,6 +14,7 @@ class C_Etudiant extends C_ControleurGenerique {
         $daoListeEtudiants = new M_DaoEtudiant;
         $daoListeEtudiants->connecter();
         $listeEtudiants = $daoListeEtudiants->getAll();
+        $this->vue->ecrireDonnee('entete', "Elèves");  
         $this->vue->ecrireDonnee('listeEtudiants', $listeEtudiants);            
         $this->vue->ecrireDonnee('centre',"vues/includes/accueil/centreListeEtudiants.inc.php");
         $this->vue->afficher();

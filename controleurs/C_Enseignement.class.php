@@ -13,6 +13,7 @@ class C_Enseignement extends C_ControleurGenerique {
         $daoListeEnseignements = new M_DaoEnseignement;
         $daoListeEnseignements->connecter();
         $listeEnseignements = $daoListeEnseignements->getAll();
+        $this->vue->ecrireDonnee('entete', "Enseignements");  
         $this->vue->ecrireDonnee('listeEnseignements', $listeEnseignements);            
         $this->vue->ecrireDonnee('centre',"vues/includes/accueil/centreListeEnseignements.inc.php");
         $this->vue->afficher();
