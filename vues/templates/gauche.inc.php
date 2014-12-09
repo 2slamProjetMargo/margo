@@ -1,12 +1,10 @@
-<fieldset>
-    <legend>
-        <h4>Menu principal</h4>
-    </legend>
-    <ul>
-        <li><a href=".?controleur=Accueil&action=defaut">Accueil</a></li>
-        <li><a href="?controleur=Enseignement&action=afficheListeEnseignements">Enseignements</a></li>
-        <li><a href="">Fillières</a></li>
-        <li><a href="">Classes</a></li>
-        <li><a href=".?controleur=Etudiant&action=afficheListeEtudiants">Elèves</a></li>
-    </ul>
-</fieldset>
+<p id="titreMenu">Menu principal</p>
+<hr>
+<ul id="menu">
+    <li id="menu-item"><a href=".?controleur=Accueil&action=defaut">Accueil</a></li>
+    <li id="menu-item"><a href="">Enseignements</a></li>
+    <li id="menu-item"><a href="">Fillières</a></li>
+    <li id="menu-item"><a href="">Classes</a></li>
+    <li id="menu-item"><a href=".?controleur=Etudiant&action=afficheListeEtudiants">Elèves</a></li>
+</ul>
+<hr>
