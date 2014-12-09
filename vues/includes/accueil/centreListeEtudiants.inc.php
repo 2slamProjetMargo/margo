@@ -13,14 +13,15 @@
                 <th>IdClasse</th>   
             </tr>
             <?php
-            $listeEleve = $this->lireDonnee('listeStage');
-            foreach ($listeEleve as $etudiant) {
-                echo'<tr><td>"' . $etudiant->getIdPersonne(). '"</td>'
-                        . '<td>"' . $etudiant->getNom() . '"</td>'
-                        . '<td>"' . $etudiant->getPrenom() . '"</td>'
-                        . '<td>"' . $etudiant->getSituation() . '"</td>'
-                        . '<td>"' . $etudiant->getAdresse() . '"</td>'
-                        . '<td>"' . $etudiant->getClasse().getCodeClasse() . '"</td>'
+            $listeEtudiants = $this->lireDonnee('listeEtudiants');
+            foreach ($listeEtudiants as $etudiant) {
+                //var_dump($etudiant); die;
+                echo'<tr><td>' . $etudiant->getIdPersonne(). '</td>'
+                        . '<td>' . $etudiant->getNom() . '</td>'
+                        . '<td>' . $etudiant->getPrenom() . '</td>'
+                        . '<td>' . $etudiant->getSituation() . '</td>'
+                        . '<td>' . $etudiant->getAdresse() . '</td>'
+                        . '<td>' . $etudiant->getClasse() . '</td>'
                         . '</tr>';
             }
             /*

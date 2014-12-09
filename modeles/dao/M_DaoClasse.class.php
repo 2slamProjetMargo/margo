@@ -1,17 +1,18 @@
 <?php
 
-/*
+/* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
+
 /**
- * Description of M_DaoEleve
+ * Description of M_DaoClasse
  *
  * @author btssio
  */
-class M_DaoEleve {
+class M_DaoClasse extends M_DaoGenerique{
     
     
         /**
@@ -22,8 +23,8 @@ class M_DaoEleve {
      */
     public function enregistrementVersObjet($enreg) {
         
-        $retour = new M_Personne(
-                $enreg['IDPERSONNE'], $enreg['NOM'], $enreg['PRENOM'], $enreg['SITUATION'], $enreg['ADRESSE'], $enreg['IDCLASSE']
+        $retour = new M_Classe(
+                $enreg['CODECLASSE'], $enreg['CODEFILIERE'], $enreg['LIBCLASSE']
                 );
         return $retour;
     }
@@ -34,11 +35,8 @@ class M_DaoEleve {
      * Lire tous les enregistrements d'une table
      * @return tableau-associatif d'objets : un tableau d'instances de la classe métier
      */
-    function getAll() {
-        $retour = null;
-        // Requête textuelle
-        $sql = "SELECT IDPERSONNE, NOM, PRENOM, SITUATION, ADRESSE, IDCLASSE FROM ETUDIANT e INNER JOIN PERSONNE p ";
-        $sql .= "ON e.idpersonne=p.idpersonne ";
+    function getOneById($codeClasse) {
+        $sql = "SELECT CODECLASSE, CODEFILIERE, LIBCLASSE FROM CLASSE WHERE CODECLASSE = ".$codeClasse.";";
         try {
             // préparer la requête PDO
             $queryPrepare = $this->pdo->prepare($sql);
@@ -48,16 +46,29 @@ class M_DaoEleve {
                 // initialiser le tableau d'objets à retourner
                 $retour = array();
                 // pour chaque enregistrement retourné par la requête
-                while ($enregistrement = $queryPrepare->fetch(PDO::FETCH_ASSOC)) {
+                $enregistrement = $queryPrepare->fetch(PDO::FETCH_ASSOC);
                     // construir un objet métier correspondant
-                    $unObjetMetier = $this->enregistrementVersObjet($enregistrement);
+                $unObjetMetier = $this->enregistrementVersObjet($enregistrement);
                     // ajouter l'objet au tableau
-                    $retour[] = $unObjetMetier;
-                }
+                $retour = $unObjetMetier;
+            
             }
         } catch (PDOException $e) {
             echo get_class($this) . ' - ' . __METHOD__ . ' : ' . $e->getMessage();
         }
         return $retour;
     }
+
+    public function insert($objetMetier) {
+        
+    }
+
+    public function objetVersEnregistrement($objetMetier) {
+    }
+    
+
+    public function update($idMetier, $objetMetier) {
+        
+    }
+
 }
